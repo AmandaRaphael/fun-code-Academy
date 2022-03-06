@@ -1,0 +1,29 @@
+.about {
+  background-color: rgb(152, 243, 228);
+  height: 80vh;
+  background-image: url("../../images/pexels-christina-morillo-1181352.jpg");
+  background-size: cover;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+.about h2 {
+  margin: 1%;
+  color: rgb(28, 92, 77);
+
+  font-weight: bold;
+}
+.aboutData {
+  margin-right: 50px;
+}
+.about form {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+.li{
+    width:40vw
+}

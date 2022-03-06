@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Estonia&family=Festive&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Shalimar&family=ZCOOL+XiaoWei&display=swap");
+.home{
+
+    width:100vw;
+    height:100vh;
+   text-align:center ;
+   position:relative;
+}
+h3 {
+  font-family: "Estonia", cursive;
+  font-family: "Estonia", cursive;
+  /* font-family: "Festive", cursive; */
+
+  /* font-family: "Shalimar", cursive; */
+  font-family: "ZCOOL XiaoWei", serif;
+color: rgb(45, 189, 153);
+}
+h1{
+     font-family: "Noticia Text", serif; 
+    
+}
+.overlay{
+background-color:rgba(255,255,255,0.4);
+position:absolute;
+top:0;
+left:0;
+z-index: 1;
+display:flex;
+flex-direction: column;
+align-items: center;
+width:100vw;
+color:black;
+  font-weight: bold;
+}

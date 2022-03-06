@@ -1,0 +1,12 @@
+.selected{
+     color: rgb(160, 238, 214);
+    font-size:25px;
+    padding:3%;
+
+}
+.unselected{
+     color: rgb(45, 189, 153);
+    font-size:25px ;
+    padding:3%;
+    text-decoration: none;
+}

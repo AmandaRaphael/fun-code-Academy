@@ -1,0 +1,17 @@
+.container{
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap:20px;
+    width:25%;
+    height:25%;
+    padding:1%;
+box-shadow: 12px 12px 2px 1px rgba(17, 79, 104, 0.5);
+}
+.button{
+border-radius: 50%;
+width:30%;
+font-size:25px;
+font-weight: bold;
+}

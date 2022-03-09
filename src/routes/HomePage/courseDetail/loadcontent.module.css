@@ -1,0 +1,9 @@
+.contentContainer{
+    display:flex;
+    gap:50px;
+    justify-content: center;
+   
+}
+.card{
+    font-weight: bold;
+}

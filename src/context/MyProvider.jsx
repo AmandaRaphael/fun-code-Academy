@@ -2,6 +2,9 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import MyContext from "./MyContext";
+import kid from "../images/kid.jpg";
+import kidmom from "../images/kidmom.jpg";
+import lady from "../images/lady.jpg";
 const MyProvider = ({ children }) => {
   const [data, setData] = useState({
     results: null,
@@ -27,7 +30,7 @@ const MyProvider = ({ children }) => {
       const results = await axios.get(url);
       setData({ results, loading: false, error: null });
       setRandomUniversityData(results.data);
-      console.log("the response is ", results.data);
+      // console.log("the response is ", results.data);
     } catch (error) {
       setData({ results: null, loading: false, error });
     }
@@ -37,20 +40,27 @@ const MyProvider = ({ children }) => {
     loadRandomUniversity();
   }, [searchInput]);
 
-  //cl gives an object with one property called current.
 
-  // const submitHandler = (e) => {
-  //   e.preventDefault();
-  //   setSearch(searchInput);
-  //   setSearchInput("");
-  //   document.querySelector("h1").classList.add("h1Change");
-  //   document.querySelector("form").classList.add("formChange");
-  // };
-  // const nextPage = () => {
-  //   setPage((prev) => prev + 1);
-  //   inputRef.current.focus();
-  // };
-
+const images = [
+  {
+    image: kid,
+    description: "specially trained teachers for kids",
+    course: "category - 1 : Kids-Fun-coding",
+    category: "kid",
+  },
+  {
+    image: kidmom,
+    category: "part-time",
+    description: "Courses in flexible timings",
+    course: "category - 2 : Part-Time(working people)",
+  },
+  {
+    image: lady,
+    category: "full-time",
+    description: "Free workshops and resume preparation.",
+    course: "category - 3 : Full-Time(job Seekers)",
+  },
+];
   return (
     <MyContext.Provider
       value={{
@@ -64,6 +74,7 @@ const MyProvider = ({ children }) => {
         inputValue,
         setInputValue,
         randomUniversityData,
+        images
       }}
     >
       {children}

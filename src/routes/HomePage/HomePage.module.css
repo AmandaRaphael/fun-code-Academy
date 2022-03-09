@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Estonia&family=Festive&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Shalimar&family=ZCOOL+XiaoWei&display=swap");
-.home{
-
-    width:100vw;
-    height:100vh;
-   text-align:center ;
-   position:relative;
+.home {
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  text-align: center;
+  gap: 50px;
+  justify-content: space-evenly;
+  background-image: url(../../images/1.jpg);
+}
+.carousel {
+  margin-top: 20px;
+  width: 40vw;
+  box-shadow: -1em 0 3em rgb(56, 56, 35);
+  height: 600px;
 }
 h3 {
   font-family: "Estonia", cursive;
@@ -13,22 +21,44 @@ h3 {
 
   /* font-family: "Shalimar", cursive; */
   font-family: "ZCOOL XiaoWei", serif;
-color: rgb(45, 189, 153);
+  color: rgb(10, 58, 58);
 }
-h1{
-     font-family: "Noticia Text", serif; 
-    
+h3 a {
+  color: rgb(151, 105, 19);
+  text-decoration: none;
 }
-.overlay{
-background-color:rgba(255,255,255,0.4);
-position:absolute;
-top:0;
-left:0;
-z-index: 1;
-display:flex;
-flex-direction: column;
-align-items: center;
-width:100vw;
-color:black;
+h1 {
+  font-family: "Noticia Text", serif;
+}
+.overlay,
+.overlayCarousel {
+  background-color: rgba(230, 243, 243, 0.8);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vw;
+  height: 50vh;
+  color: black;
   font-weight: bold;
+  margin-top: 100px;
+  padding: 20px;
+}
+.overlayCarousel {
+  height: 10vh;
+}
+.card {
+  display: flex;
+  gap: 120px;
+  width: 80vw;
+  justify-content: center;
+  background-color: rgb(140, 184, 182);
+  margin: 2% 2% 2% 10%;
+  padding: 2%;
+}
+.height {
+  height: 40px;
+}
+.cardImg {
+  height: 50%;
 }

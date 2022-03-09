@@ -1,25 +1,31 @@
 import React from "react";
-import { Link,NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../images/FCA.png";
-import styles from "./NavBar.module.css"
+import styles from "./NavBar.module.css";
 const NavBar = () => {
   return (
-    <div>
+    <div className={styles.navContainer}>
       <div
         className="d-flex flex-column flex-md-row align-items-center justify-content-between
         p-4 px-md-4 mb-4 bg-Transparent border-bottom shadow-sm"
       >
-        <h5 className="my-0 mr-md-auto font-weight-normal"> <NavLink
+        <h5 className="my-0 mr-md-auto font-weight-normal">
+          {" "}
+          <NavLink
             className={(navData) =>
               navData.isActive ? styles.selected : styles.unselected
             }
             to={"/"}
           >
-            <img src={logo} width="70px"/>
-          </NavLink></h5>
+            <img src={logo} width="70px" />
+          </NavLink>
+        </h5>
+        <h3 className={styles.title}>
+          <NavLink to={"/"}>Fun-code Academy</NavLink>
+        </h3>
         <nav className="my-2 my-md-1 me-md-5">
           {/* <Link className="p-2 text-dark" to={"/"} >Home</Link> */}
-         
+
           <NavLink
             className={(navData) =>
               navData.isActive ? styles.selected : styles.unselected
@@ -43,6 +49,14 @@ const NavBar = () => {
             to={"/contact"}
           >
             Contact
+          </NavLink>
+          <NavLink
+            className={(navData) =>
+              navData.isActive ? styles.selected : styles.unselected
+            }
+            to={"/courses"}
+          >
+            Courses
           </NavLink>
           <NavLink
             className={(navData) =>

@@ -1,12 +1,23 @@
+.navContainer{
+    background-color:whitesmoke
+}
 .selected{
-     color: rgb(160, 238, 214);
+     color: rgb(88, 148, 130);
     font-size:25px;
-    padding:3%;
-
+    padding:2%;
+ text-decoration: none;
 }
 .unselected{
-     color: rgb(45, 189, 153);
-    font-size:25px ;
-    padding:3%;
+     color: rgb(10, 77, 60);
+    font-size:20px ;
+    padding:2%;
     text-decoration: none;
+}
+.title{
+    width:100vw;
+    margin-left:1%;
+ 
+}
+.title a{
+   text-decoration: none;
 }

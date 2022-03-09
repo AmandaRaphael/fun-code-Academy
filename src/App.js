@@ -1,16 +1,17 @@
-
-import './App.css';
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import AboutPage from './routes/AboutPage/AboutPage';
-import ContactPage from './routes/contactPage/ContactPage';
-import Portfolio from "./routes/myClass/MyClass"
-import NavBar from './components/Navigations/NavBar';
-import Course from './components/Courses/Course';
-import HomePage from './routes/HomePage/HomePage';
-import CourseTitle from './components/Courses/CourseTitle';
-import MyProvider from './context/MyProvider'
+import AboutPage from "./routes/AboutPage/AboutPage";
+import ContactPage from "./routes/contactPage/ContactPage";
+import Portfolio from "./routes/myClass/MyClass";
+import NavBar from "./components/Navigations/NavBar";
+import Course from "./components/Courses/Course";
+import HomePage from "./routes/HomePage/HomePage";
+import CourseTitle from "./components/Courses/CourseTitle";
+import MyProvider from "./context/MyProvider";
+import Courses from "./routes/HomePage/Courses";
+import ApplicationForm from "./routes/HomePage/ApplicationForm";
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +32,8 @@ function App() {
         <Route path="/course" element={<Course />}>
           <Route path="/course/:courseName" element={<CourseTitle />} />
         </Route>
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/apply" element={<ApplicationForm />} />
         <Route path="*" element={<h1>404 not found</h1>} />
       </Routes>
     </BrowserRouter>
@@ -38,3 +41,4 @@ function App() {
 }
 
 export default App;
+

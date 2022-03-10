@@ -7,7 +7,7 @@ const Course = () => {
     <main>
       <div className={Styles.courseContainer}>
         <h2> My Courses</h2>
-        <ul>
+        <ul className={Styles.links}>
           {titles.map((ele, i) => (
             <NavLink
               className={Styles.link}

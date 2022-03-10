@@ -9,7 +9,7 @@ const CourseDetail = () => {
     
       return (
         <div>
-          <h2 className={styles.h2}>{courseDetail}</h2>
+          <h2 className={styles.courseDetailH2}>{courseDetail}</h2>
           <LoadContent
             courseDetail={courseDetail}
             courseCategory={courseCategory}

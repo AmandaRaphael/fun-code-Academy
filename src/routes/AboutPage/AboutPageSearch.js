@@ -16,7 +16,7 @@ const AboutPageSearch = () => {
         {dataList.map((ele, i) => {
             return (
               <div className={style.li}>
-                <li>
+                <li key={ele.name}>
                   {ele.name}{" "}
                   <a href={ele.web_pages} target="_blank">
                     Website

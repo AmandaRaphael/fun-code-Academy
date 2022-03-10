@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Styles from "./course.module.css";
 const CourseTitle = () => {
   const { courseName } = useParams();
     const [profileInfo, setProfileInfo] = useState(null);
@@ -16,9 +17,9 @@ const CourseTitle = () => {
         setRandomNum(Math.floor(Math.random()*11))
     },[courseName])
   return (
-    <div>
+    <div className={Styles.heading}>
       <h2>
-        Your {courseName} course is at level {randomNum}.
+        Your {courseName} course is at level {randomNum}. Your current teacher is { profileInfo? profileInfo.name.first:"Loading...wait for a sec" }.
       </h2>
       {profileInfo != null ? (
         <div className="row  p-5 d-flex justify-content-center ">
@@ -54,7 +55,8 @@ const CourseTitle = () => {
                   <button className="btn btn-outline-primary px-4">
                     Message
                   </button>
-                  <button className="btn btn-primary px-4 ms-3">
+                  
+                  <button className="btn btn-primary px-4 ms-3 mt-2">
                     Go To Class
                   </button>
                 </div>

@@ -1,5 +1,5 @@
 .about {
- 
+ width:100vw;
   height: 80vh;
   background-image: url("../../images/pexels-christina-morillo-1181352.jpg");
   background-size: cover;
@@ -13,7 +13,6 @@
 .about h2 {
   margin: 1%;
   color: rgb(28, 92, 77);
-
   font-weight: bold;
 }
 .aboutData {
@@ -21,9 +20,28 @@
 }
 .about form {
   width: 50vw;
-  display: flex;
-  justify-content: center;
+  height:10vh
 }
 .li{
     width:40vw
+}
+@media only screen and (max-width: 768px) {
+  .about{
+height:auto
+  }
+  .aboutData{
+     background-color: rgba(241, 246, 247, 0.5);
+     padding:2%;
+     font-size:medium;
+     width:70vw;
+     height:70vh;
+    justify-content: flex-end;
+  }
+.about form{
+  /* text-align: center; */
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width:100vw
+}
 }

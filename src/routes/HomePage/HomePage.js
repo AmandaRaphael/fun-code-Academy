@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Styles from "./HomePage.module.css";
+import styles from "./HomePage.module.css";
 import { Carousel, Button } from "react-bootstrap";
 
 import woman from "../../images/woman.jpg";
@@ -20,8 +20,8 @@ const HomePage = () => {
   return (
     <div>
       {" "}
-      <div className={Styles.home}>
-        <div className={Styles.overlay}>
+      <div className={styles.home}>
+        <div className={styles.overlay}>
           <h1>Learn a computer language.Open your world of opportunities!</h1>
           <h3>
             And If you want to have fun learning it,{" "}
@@ -38,7 +38,7 @@ const HomePage = () => {
             Explore our Courses
           </Button>
         </div>
-        <div className={Styles.carousel}>
+        <div className={styles.carousel}>
           {" "}
           <Carousel fade>
             {images.map((img, i) => {
@@ -51,7 +51,7 @@ const HomePage = () => {
                     height="700px"
                   />
                   <Carousel.Caption>
-                    <div className={Styles.overlayCarousel}>
+                    <div className={styles.overlayCarousel}>
                       {" "}
                       <h3>{img.course}</h3>
                       <p>{img.description}</p>

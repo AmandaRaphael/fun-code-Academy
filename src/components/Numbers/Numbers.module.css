@@ -4,8 +4,8 @@
     justify-content: center;
     flex-wrap:wrap;
     gap:20px;
-    width:25%;
-    height:25%;
+    width:25vw;
+    height:50vh;
     padding:1%;
 box-shadow: 12px 12px 2px 1px rgba(17, 79, 104, 0.5);
 }
@@ -14,4 +14,18 @@ border-radius: 50%;
 width:30%;
 font-size:25px;
 font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+.container{
+    width:80vw;
+    height:70vh;
+    margin:1%;
+    padding:2%
+}
+.button{
+    width:20%;
+    height:20%;
+      padding:1%;
+        margin:5% 1%;
+}
 }

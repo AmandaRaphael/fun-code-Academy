@@ -20,10 +20,10 @@ const Courses = () => {
   return (
     <main>
       {" "}
-      <div className={Styles.card}>
+      <div className={Styles.cardDiv}>
         {images.map((img, i) => {
           return (
-            <Card style={{ width: "18rem" }} key={i}>
+            <Card style={{ width: "18rem" }} key={i} className={Styles.card}>
               <Card.Img
                 variant="top"
                 src={pics[i]}
@@ -37,7 +37,9 @@ const Courses = () => {
                 <Button variant="info" onClick={buttonHandle}>
                   Apply Now
                 </Button>
-                <Link to={`/courses/${img.course}/${img.category}`}>Know more</Link>
+                <Link to={`/courses/${img.course}/${img.category}`}>
+                  Know more
+                </Link>
               </Card.Body>{" "}
             </Card>
           );

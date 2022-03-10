@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./About.module.css";
 import { useEffect, useState, useRef, useContext } from "react";
-
 import MyContext from "../../context/MyContext";
 import AboutPageSearch from "./AboutPageSearch";
 const AboutPage = () => {
@@ -26,13 +25,14 @@ const AboutPage = () => {
           software developer
         </li>
         <li>We have teachers specially trained for our children`s course</li>
-        <h2>Find our Offline courses in your city below.</h2>
+        <h3>Find our Offline courses in your city below.</h3>
       </div>
 
       <form>
         <input
           ref={inputRef}
           type="text"
+          placeholder="enter your city"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />

@@ -1,14 +1,20 @@
-import React from 'react'
-import Numbers from "../../components/Numbers/Numbers"
-import styles from "./MyClass.module.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import Numbers from "../../components/Numbers/Numbers";
+import styles from "./MyClass.module.css";
 const MyClass = () => {
-    const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    return (
-      <div className={styles.container}>
-        <p className={styles.para}>Enter your pin</p>
-        <Numbers digits={digits} />
-      </div>
-    );
-}
+  const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const [userPin, setUserPin] = useState("");
+  return (
+    <div className={styles.container}>
+      <p className={styles.para}>Enter your pin</p>
+      <input type="password" value={userPin} className={styles.pwd} />
+      <Numbers digits={digits} userPin={userPin} setUserPin={setUserPin} />
+      <p className={styles.para}>New User? <Link to="/courses/apply">Register now!</Link>
+      </p>
+    </div>
+  );
+};
 
-export default MyClass
+export default MyClass;

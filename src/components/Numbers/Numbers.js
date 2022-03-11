@@ -1,20 +1,19 @@
 
-import { useState } from "react";
 import styles from "./Numbers.module.css";
-import { NavLink,useNavigate } from "react-router-dom";
-const Numbers = ({ digits }) => {
-  const [userPin, setUserPin] = useState("");
-  const navigate= useNavigate() //1
+import { useNavigate } from "react-router-dom";
+const Numbers = ({ digits,userPin,setUserPin }) => {
+ 
+  const navigate= useNavigate() 
   if (userPin.length === 4 && userPin === "1972") {
-    // alert("Access granted!");
  navigate(`/course`)
   } else if (userPin.length === 4 && userPin !== "1972") {
     alert("Access denied!");
+    setUserPin("")
   }
   const buttonHandle = (e) => {
     if (userPin.length < 4) { 
       setUserPin((userPin) => {
-        return userPin + e.target.value;//""+1+1
+        return userPin + e.target.value;
       });
     }
   };

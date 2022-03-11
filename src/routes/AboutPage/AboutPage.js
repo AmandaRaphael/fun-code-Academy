@@ -25,14 +25,14 @@ const AboutPage = () => {
           software developer
         </li>
         <li>We have teachers specially trained for our children`s course</li>
-        <h3>Find our Offline courses in your city below.</h3>
+        <h3>Find our Offline courses in your country below.</h3>
       </div>
 
       <form>
         <input
           ref={inputRef}
           type="text"
-          placeholder="enter your city"
+          placeholder="enter your country"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />

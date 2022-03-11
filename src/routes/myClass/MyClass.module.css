@@ -8,8 +8,11 @@
 }
 .para{
     color:rgb(55, 5, 148);
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
+}
+.pwd,.para{
+    margin:2%
 }
 @media only screen and (max-width: 768px) {
     .container{

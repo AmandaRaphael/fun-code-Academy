@@ -13,14 +13,14 @@ const MyProvider = ({ children }) => {
   });
   const { results, loading, error } = data;
   const [randomUniversityData, setRandomUniversityData] = useState(null);
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState(null);
   const [inputValue, setInputValue] = useState("");
   const [page, setPage] = useState(1);
   const inputRef = useRef();
-  
+
   const submitHandler = (e) => {
     e.preventDefault();
-    setSearchInput(inputValue);
+    setSearchInput(inputValue[0].toUpperCase() + inputValue.slice(1));
     // setSearchInput("");
   };
 
@@ -40,27 +40,26 @@ const MyProvider = ({ children }) => {
     loadRandomUniversity();
   }, [searchInput]);
 
-
-const images = [
-  {
-    image: kid,
-    description: "specially trained teachers for kids",
-    course: "category - 1 : Kids-Fun-coding",
-    category: "kid",
-  },
-  {
-    image: kidmom,
-    category: "part-time",
-    description: "Courses in flexible timings",
-    course: "category - 2 : Part-Time(working people)",
-  },
-  {
-    image: lady,
-    category: "full-time",
-    description: "Free workshops and resume preparation.",
-    course: "category - 3 : Full-Time(job Seekers)",
-  },
-];
+  const images = [
+    {
+      image: kid,
+      description: "specially trained teachers for kids",
+      course: "category - 1 : Kids-Fun-coding",
+      category: "kid",
+    },
+    {
+      image: kidmom,
+      category: "part-time",
+      description: "Courses in flexible timings",
+      course: "category - 2 : Part-Time(working people)",
+    },
+    {
+      image: lady,
+      category: "full-time",
+      description: "Free workshops and resume preparation.",
+      course: "category - 3 : Full-Time(job Seekers)",
+    },
+  ];
   return (
     <MyContext.Provider
       value={{
@@ -74,7 +73,7 @@ const images = [
         inputValue,
         setInputValue,
         randomUniversityData,
-        images
+        images,
       }}
     >
       {children}
